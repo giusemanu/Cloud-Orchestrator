@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: cyan;" xmlns="http://javafx.com/javafx/25.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="orchestrator.gui.ClientGUIController">
+   
+   <center>
+      <HBox spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            
+            <VBox alignment="TOP_CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Container Docker">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="dockerList" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#startDocker" text="Avvia Container">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Button>
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#stopDocker" text="Spegni Container">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            
+            <VBox alignment="TOP_CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Macchine Virtuali">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="vboxList" style="-fx-background-color: azure;" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#startVBox" text="Avvia Macchina" />
+                        <Button mnemonicParsing="false" onAction="#stopVBox" text="Spegni Macchina" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   
+   <bottom>
+      <VBox alignment="TOP_CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Terminale Server">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="logArea" editable="false" prefHeight="120.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+   
+</BorderPane>

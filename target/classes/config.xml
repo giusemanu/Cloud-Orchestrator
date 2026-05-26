@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <ServerPort>8080</ServerPort>
+    <DbUrl>jdbc:mysql://127.0.0.1:3307/cloud_orchestrator?useSSL=false&amp;allowPublicKeyRetrieval=true</DbUrl>
+    <DbUser>root</DbUser>
+    <DbPassword>root</DbPassword>
+</config>

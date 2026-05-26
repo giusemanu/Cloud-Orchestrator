@@ -1,0 +1,10 @@
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/gui/ClientGUIController.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/gui/MainGUI.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/model/Machine.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/db/DatabaseManager.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/model/ResourceCloud.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/network/HandleClient.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/model/Docker.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/model/VirtualBox.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/network/Server.java
+/home/giuse/Scrivania/Cloud Orchestrator/src/main/java/orchestrator/utils/Parser.java
