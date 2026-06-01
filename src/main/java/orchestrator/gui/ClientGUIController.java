@@ -12,6 +12,12 @@ import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controller dell'architettura MVC per l'interfaccia JavaFX.
+ * Gestisce gli eventi generati dall'utente e orchestra la comunicazione di rete (Socket)
+ * verso il Server per l'invio dei comandi.
+ */
+
 public class ClientGUIController implements Initializable {
 
     @FXML private ListView<String> dockerList;
@@ -24,11 +30,9 @@ public class ClientGUIController implements Initializable {
              PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
              BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
             
-            // Chiede al Server la lista delle macchine
             writer.println("list:all:machines");
             String risposta = reader.readLine(); 
             
-            // La risposta è tipo: DOCKER=cont1,cont2|VBOX=vm1,vm2
             if (risposta != null && risposta.contains("|")) {
                 String[] sezioni = risposta.split("\\|");
                 
@@ -50,7 +54,6 @@ public class ClientGUIController implements Initializable {
 
     @FXML
     public void startDocker() {
-        // Legge quale elemento è selezionato nella lista
         String selezionato = dockerList.getSelectionModel().getSelectedItem();
         if (selezionato != null) {
             inviaComando("start:docker:" + selezionato);

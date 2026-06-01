@@ -2,6 +2,12 @@ package orchestrator.model;
 
 import java.io.IOException;
 
+/**
+ * Implementazione concreta di {@link Machine}.
+ * Gestisce l'interazione specifica con il sistema sottostante per l'avvio e l'arresto
+ * di questa specifica tipologia di risorsa.
+ */
+
 public class VirtualBox extends Machine{
     public VirtualBox(String name){
         setName(name);

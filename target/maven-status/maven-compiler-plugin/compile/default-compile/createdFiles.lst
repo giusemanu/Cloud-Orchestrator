@@ -1,5 +1,4 @@
 orchestrator/utils/Parser.class
-orchestrator/network/Server.class
 orchestrator/network/HandleClient.class
 orchestrator/model/Machine.class
 orchestrator/gui/ClientGUIController.class

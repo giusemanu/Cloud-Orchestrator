@@ -5,6 +5,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 
+/**
+ * Utility per la lettura e il parsing del file di configurazione XML.
+ * Carica in memoria i parametri critici di sistema (es. porta server e credenziali DB)
+ * all'avvio dell'applicazione.
+ */
+
 public class Parser {
     
     public static int serverPort;

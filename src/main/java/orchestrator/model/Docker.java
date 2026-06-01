@@ -8,6 +8,12 @@ import com.github.dockerjava.core.DockerClientConfig;
 import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
 import com.github.dockerjava.transport.DockerHttpClient;
 
+/**
+ * Implementazione concreta di {@link Machine}.
+ * Gestisce l'interazione specifica con il sistema sottostante per l'avvio e l'arresto
+ * di questa specifica tipologia di risorsa.
+ */
+
 public class Docker extends Machine {
     private DockerClient dockerClient;
 
