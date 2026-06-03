@@ -68,7 +68,7 @@ public class HandleClient extends Thread{
                         BufferedReader readerDocker = new BufferedReader(new InputStreamReader(pDocker.getInputStream()));
                         String lineD;
                         while((lineD = readerDocker.readLine()) != null){
-                            if(!lineD.equalsIgnoreCase("cloud_db") && !lineD.equalsIgnoreCase("pannello_phpmyadmin")){
+                            if(!lineD.equalsIgnoreCase("cloud_db")){
                                 response.append(lineD).append(",");
                             }
                         }
