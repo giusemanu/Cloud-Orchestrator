@@ -1,3 +1,4 @@
 *.html linguist-vendored
 *.htm linguist-vendored
-
+*.js linguist-documentation=true
+*.css linguist-documentation=true
